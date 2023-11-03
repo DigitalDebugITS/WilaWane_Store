@@ -16,11 +16,23 @@ a:hover {
 h1,
 h2,
 h3,
-h4,
+
+h4{text-align: center;
+
+}
 h5,
 h6 {
   font-family: var(--font-primary);
 }
+
+<style>
+  .img-fluids {
+    max-width: 600px; /* Increase the maximum width */
+    max-height: 300px; /* Increase the maximum height */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+</style>
 
 /*--------------------------------------------------------------
 # Preloader
