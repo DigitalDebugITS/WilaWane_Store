@@ -1207,6 +1207,7 @@ section {
   .cta .container {
     padding: 60px;
   }
+  
 }
 
 .cta .content h3 {
@@ -1227,7 +1228,7 @@ section {
   right: 0;
   bottom: 10px;
   height: 10px;
-  background: rgba(var(--color-primary-rgb), 0.5);
+  background-color:#f9d030;
   z-index: -1;
 }
 
@@ -1246,7 +1247,7 @@ section {
   border-radius: 5px;
   transition: 0.5s;
   margin-top: 10px;
-  background: rgba(var(--color-primary-dark-rgb), 0.9);
+  background:#F62AA0;
 }
 
 .cta .content .cta-btn:hover {
