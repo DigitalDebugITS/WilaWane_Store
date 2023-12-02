@@ -440,7 +440,7 @@ img {
 }
 
 .page-header__bottomline {
-  background-color: #f8f8f8
+  background-color: #ffffff
 }
 
 .page-header__bottomline .logo {
@@ -567,7 +567,7 @@ img {
 }
 
 .page-header .dropdown__link:hover {
-  color: #262626
+  color: #ffffff;
 }
 
 .page-header .dropdown__banner {
@@ -658,7 +658,7 @@ img {
 }
 
 .page-footer .footer-nav__col .email__addr:hover {
-  color: #2b2b2b
+  color: #ffffff
 }
 
 .page-footer .footer-nav__heading {

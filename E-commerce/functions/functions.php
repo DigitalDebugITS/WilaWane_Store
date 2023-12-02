@@ -158,7 +158,7 @@ echo "
 
 <a href='$pro_url' >
 
-<img src='admin_area/product_images/$pro_img1' class='img-responsive' >
+<img src='../E-commerce/admin_area/product_images/$pro_img1' class='img-responsive' style='width: 300px; height: 300px;'>
 
 </a>
 
@@ -166,21 +166,21 @@ echo "
 
 <center>
 
-<p class='btn btn-warning'> $manufacturer_name </p>
+
 
 </center>
 
-<hr>
 
-<h3><a href='$pro_url' >$pro_title</a></h3>
+
+<h6 ><a style='color:#000000;  href='$pro_url' >$pro_title</a></h6>
 
 <p class='price' > $product_price $product_psp_price </p>
 
 <p class='buttons' >
 
-<a href='$pro_url' class='btn btn-default' >View Details</a>
+<a href='$pro_url' class='btn btn-default' style='background-color:#fc32c3; color:white;' >View Details</a>
 
-<a href='$pro_url' class='btn btn-danger'>
+<a href='$pro_url' class='btn' style='background-color:#fc32c3; color:white;'>
 
 <i class='fa fa-shopping-cart'></i> Add To Cart
 
@@ -204,10 +204,7 @@ $product_label
 
 }
 
-// getPro function Ends //
 
-
-/// getProducts Function Starts ///
 
 function getProducts(){
 
