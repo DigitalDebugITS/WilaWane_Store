@@ -137,7 +137,7 @@ else{
 
 $product_label = "
 
-<a class='label sale' href='#' style='color:black;'>
+<a class='label sale' href='#' style='color:black; font-size:11px;'>
 
 <div class='thelabel'>$pro_label</div>
 
@@ -158,7 +158,7 @@ echo "
 
 <a href='$pro_url' >
 
-<img src='../E-commerce/admin_area/product_images/$pro_img1' class='img-responsive' style='width: 300px; height: 300px;'>
+<img src='admin_area/product_images/$pro_img1' class='img-responsive' style='width: 300px; height: 300px;'>
 
 </a>
 
@@ -172,15 +172,15 @@ echo "
 
 
 
-<h6 ><a style='color:#000000;  href='$pro_url' >$pro_title</a></h6>
+<h6 ><a style='color:#000000; font-size:18px;' href='$pro_url' >$pro_title</a></h6>
 
 <p class='price' > $product_price $product_psp_price </p>
 
 <p class='buttons' >
 
-<a href='$pro_url' class='btn btn-default' style='background-color:#fc32c3; color:white;' >View Details</a>
+<a href='$pro_url' class='btn btn-default' style='background-color:#fc32c3; color:white; font-size: 15px' >View Details</a>
 
-<a href='$pro_url' class='btn' style='background-color:#fc32c3; color:white;'>
+<a href='$pro_url' class='btn' style='background-color:#fc32c3; color:white; font-size: 15px'>
 
 <i class='fa fa-shopping-cart'></i> Add To Cart
 
