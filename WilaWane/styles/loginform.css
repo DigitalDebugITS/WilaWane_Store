@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .logo{
+    font-size: 38px;
+    font-weight: 500;
+    color:white;
+  
+  }
+  
+  
+  body{
+      background: linear-gradient(245.59deg, #F62AA0 50%, #d2007b28.53%, #F62AA0 75.52%);
+      font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  form{
+      padding: 10px;
+      margin: 20px;
+      width: 40%;
+   
+      
+  }
+  h1{
+    text-align: center;
+    padding: -69px;
+    margin: 0px;
+    color: #ffffff;
+    font-size: 60px;
+  }
+  .btn {
+  background-color:  #F62AA0; ;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  }
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 10 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 110 16px;
+  }
+  
+  .container {
+    background-color: #ffffff;
+  
+    border: 15px solid rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  
+  input[type=email] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  input[type=Password] {
+    width: 100%;
+    margin-bottom: 19px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 19px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 20px;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  
+  
+  .btn:hover {
+    background-color: #fd51b5 ;
+  }
+  
+  
+  
+  /* Responsive layout */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction:column;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+  
