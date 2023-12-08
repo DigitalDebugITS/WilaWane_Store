@@ -83,7 +83,7 @@
           
           <li><a class="nav-link " href="index.html#contact">Contact</a></li>
       
-          <li><a class="btn-getstarted " href="checkout.php">Login</a></li>
+          <li><a class="btn-getstarted " href="customer/customer_login.php">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -101,7 +101,7 @@
     $user_id = $row_customer['customer_id'];
     echo "Welcome : <a href='customer/my_account.php?customer_id=$user_id'>$user_name</a>";
 } else {
-    echo "Welcome : Guest";
+    echo " <i class='bi bi-person-circle'></i> Guest";
 }?>
 
             </div>

@@ -178,11 +178,9 @@ echo "
 
 <p class='buttons' >
 
-<a href='$pro_url' class='btn btn-default' style='background-color:#fc32c3; color:white; font-size: 15px' >View Details</a>
+<a href='$pro_url' class='btn' style='background-color:#f9d030; color:black; font-size: 15px'>
 
-<a href='$pro_url' class='btn' style='background-color:#fc32c3; color:white; font-size: 15px'>
-
-<i class='fa fa-shopping-cart'></i> Add To Cart
+ Add To Cart <i class='bi bi-cart-check'></i>
 
 </a>
 
