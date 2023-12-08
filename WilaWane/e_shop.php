@@ -71,23 +71,22 @@
           <ul>
 
 
-            
-              <li><a class="nav-link " href="#">Home</a></li>
-            <li><a class="nav-link " href="index.html#about">About</a></li>
-            <li><a class="nav-link " href="index.html#services">Services</a></li>
-            <li><a class="nav-link " href="index.html#portfolio">Portfolio</a></li>
-            <li><a class="nav-link " href="index.html#team">Team</a></li>
-            <!-- <li><a href="blog.html">Blog</a></li> -->
-            <li><a class="nav-link " href="index.html#features">Values</a></li>
-            <li><a class="nav-link " href="index.html#faq">FAQ</a></li>
-            
-            <li><a class="nav-link " href="index.html#contact">Contact</a></li>
-            <?php if (!isset($_SESSION['customer_email'])) : ?>
-    <li><a class="btn-getstarted" href="login.php">Login</a></li>
-<?php endif; ?>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle d-none"></i>
-        </nav><!-- .navbar -->
+           
+            <li><a class="nav-link " href="#">Home</a></li>
+          <li><a class="nav-link " href="index.html#about">About</a></li>
+          <li><a class="nav-link " href="index.html#services">Services</a></li>
+          <li><a class="nav-link " href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link " href="index.html#team">Team</a></li>
+           <!-- <li><a href="blog.html">Blog</a></li> -->
+          <li><a class="nav-link " href="index.html#features">Values</a></li>
+          <li><a class="nav-link " href="index.html#faq">FAQ</a></li>
+          
+          <li><a class="nav-link " href="index.html#contact">Contact</a></li>
+      
+          <li><a class="btn-getstarted " href="checkout.php">Login</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
 
         
 
@@ -120,15 +119,15 @@
       </div>
     </header><!-- End Header -->
 
-    <section id="hero-animated" class="hero-animated d-flex align-items-center">
-      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-        <img src="assets/img/hero-carousel/wila_wane e.png" class="img-fluid animated">
-        <!-- <h2>Welcome to <span>WilaWane</span></h2> -->
-      
-      
-    </section>
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+      <img src="assets/img/hero-carousel/wila_wane e.png" class="img-fluid animated">
+      <!-- <h2>Welcome to <span>WilaWane</span></h2> -->
+    
+     
+  </section>
 
-    <main id="main">
+  <main id="main">
 
     <div id="content" class="container"><!-- container Starts -->
 
@@ -138,11 +137,11 @@
 
       getPro();
 
-      ?>
+    ?>
 
-              <!-- Tab Content -->
-            
-            </div>
+            <!-- Tab Content -->
+          
+          </div>
 
 
     </main><!-- End #main -->
