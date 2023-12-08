@@ -3,12 +3,7 @@
 session_start();
 
 include("includes/db.php");
-
-<<<<<<< HEAD
 include("functions/functions.php");
-=======
-// include("functions/functions.php");
->>>>>>> 52fad35c0d899a0c82b6c11e258c7f8427804b79
 // include("includes/main.php");
 
 ?>

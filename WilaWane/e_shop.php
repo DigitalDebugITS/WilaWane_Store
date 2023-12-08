@@ -73,7 +73,22 @@
 
            
             <li><a class="nav-link " href="#">Home</a></li>
-          <li><a class="nav-link " href="index.html#about">About</a></li>
+            <li class="dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+    <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+        <?php
+        $get_categories = "SELECT * FROM categories";
+        $run_categories = mysqli_query($con, $get_categories);
+        
+        while ($row_category = mysqli_fetch_array($run_categories)) {
+            $cat_id = $row_category['cat_id'];
+            $cat_title = $row_category['cat_title'];
+            echo "<a class='dropdown-item' href='shop.php?cat[]=$cat_id'>$cat_title</a>";
+        }
+        ?>
+    </div>
+</li>
+
      
           
           <li><a class="nav-link " href="index.html#contact">Contact</a></li>
