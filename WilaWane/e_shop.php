@@ -93,8 +93,9 @@ include("functions/functions.php");
         </div>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
+  
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
       <img src="assets/img/hero-carousel/wila_wane e.png" class="img-fluid animated">

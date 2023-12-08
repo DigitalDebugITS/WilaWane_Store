@@ -164,13 +164,6 @@ echo "
 
 <div class='text' >
 
-<center>
-
-
-
-</center>
-
-
 
 <h6 ><a style='color:#000000; font-size:18px;' href='$pro_url' >$pro_title</a></h6>
 
@@ -178,9 +171,7 @@ echo "
 
 <p class='buttons' >
 
-<a href='$pro_url' class='btn btn-default' style='background-color:#fc32c3; color:white; font-size: 15px' >View Details</a>
-
-<a href='$pro_url' class='btn' style='background-color:#fc32c3; color:white; font-size: 15px'>
+<a href='$pro_url' class='btn btn-danger' style='background-color:#f9d030; colorblack; font-size: 15px'>
 
 <i class='fa fa-shopping-cart'></i> Add To Cart
 
@@ -384,12 +375,11 @@ echo "
 
 <a href='$pro_url' class='btn btn-default' >View details</a>
 
-<a href='$pro_url' class='btn btn-danger'>
+<a href='$pro_url' class='btn btn-danger' style='background-color:#f9d030; color:black;'>
 
 <i class='fa fa-shopping-cart' data-price=$pro_price></i> Add To Cart
 
 </a>
-
 
 </p>
 
