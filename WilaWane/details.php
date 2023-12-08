@@ -24,7 +24,6 @@ if ($check_product == 0) {
     $pro_label = $row_product['product_label'];
     $pro_psp_price = $row_product['product_psp_price'];
     $pro_features = $row_product['product_features'];
-    $pro_video = $row_product['product_video'];
     $status = $row_product['status'];
     $pro_url = $row_product['product_url'];
 
