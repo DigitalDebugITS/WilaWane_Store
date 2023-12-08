@@ -1,84 +1,91 @@
 <?php
 
-$db = mysqli_connect("localhost","root","","ecom_store");
+$db = mysqli_connect("localhost", "root", "", "ecom_store");
 
-/// IP address code starts /////
-function getRealUserIp(){
-    switch(true){
-      case (!empty($_SERVER['HTTP_X_REAL_IP'])) : return $_SERVER['HTTP_X_REAL_IP'];
-      case (!empty($_SERVER['HTTP_CLIENT_IP'])) : return $_SERVER['HTTP_CLIENT_IP'];
-      case (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) : return $_SERVER['HTTP_X_FORWARDED_FOR'];
-      default : return $_SERVER['REMOTE_ADDR'];
+function getRealUserIp()
+{
+    switch (true) {
+        case (!empty($_SERVER['HTTP_X_REAL_IP'])):
+            return $_SERVER['HTTP_X_REAL_IP'];
+        case (!empty($_SERVER['HTTP_CLIENT_IP'])):
+            return $_SERVER['HTTP_CLIENT_IP'];
+        case (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])):
+            return $_SERVER['HTTP_X_FORWARDED_FOR'];
+        default:
+            return $_SERVER['REMOTE_ADDR'];
     }
- }
-/// IP address code Ends /////
-
-
-// items function Starts ///
-
-function items(){
-
-global $db;
-
-$ip_add = getRealUserIp();
-
-$get_items = "select * from cart where ip_add='$ip_add'";
-
-$run_items = mysqli_query($db,$get_items);
-
-$count_items = mysqli_num_rows($run_items);
-
-echo $count_items;
-
 }
 
+function items()
+{
+    global $db;
 
-// items function Ends ///
+    $ip_add = getRealUserIp();
 
-// total_price function Starts //
+    $get_items = "SELECT * FROM cart WHERE ip_add='$ip_add'";
+    $run_items = mysqli_query($db, $get_items);
+    $count_items = mysqli_num_rows($run_items);
 
-function total_price(){
-
-global $db;
-
-$ip_add = getRealUserIp();
-
-$total = 0;
-
-$select_cart = "select * from cart where ip_add='$ip_add'";
-
-$run_cart = mysqli_query($db,$select_cart);
-
-while($record=mysqli_fetch_array($run_cart)){
-
-$pro_id = $record['p_id'];
-
-$pro_qty = $record['qty'];
-
-
-$sub_total = $record['p_price']*$pro_qty;
-
-$total += $sub_total;
-
-
-
-
-
-
+    echo $count_items;
 }
 
+<<<<<<< HEAD
+function total_price()
+{
+    global $db;
+=======
 echo "K" . $total;
+>>>>>>> 04f60ba9908614988aa6bf3f510473420e3b3cfb
 
+    $ip_add = getRealUserIp();
+    $total = 0;
 
+    $select_cart = "SELECT * FROM cart WHERE ip_add='$ip_add'";
+    $run_cart = mysqli_query($db, $select_cart);
 
+    while ($record = mysqli_fetch_array($run_cart)) {
+        $pro_id = $record['p_id'];
+        $pro_qty = $record['qty'];
+        $sub_total = $record['p_price'] * $pro_qty;
+        $total += $sub_total;
+    }
+
+    echo "$" . $total;
 }
 
+function getPro()
+{
+    global $db;
 
+    $get_products = "SELECT * FROM products ORDER BY 1 DESC LIMIT 0,8";
+    $run_products = mysqli_query($db, $get_products);
 
-// total_price function Ends //
+    while ($row_products = mysqli_fetch_array($run_products)) {
+        $pro_id = $row_products['product_id'];
+        $pro_title = $row_products['product_title'];
+        $pro_price = $row_products['product_price'];
+        $pro_img1 = $row_products['product_img1'];
+        $pro_label = $row_products['product_label'];
+        $pro_psp_price = $row_products['product_psp_price'];
+        $pro_url = $row_products['product_url'];
 
-// getPro function Starts //
+        if ($pro_label == "Sale" || $pro_label == "Gift") {
+            $product_price = "<del> $$pro_price </del>";
+            $product_psp_price = "| $$pro_psp_price";
+        } else {
+            $product_psp_price = "";
+            $product_price = "$$pro_price";
+        }
 
+<<<<<<< HEAD
+        if ($pro_label != "") {
+            $product_label = "
+            <a class='label sale' href='#' style='color:black; font-size:11px;'>
+                <div class='thelabel'>$pro_label</div>
+                <div class='label-background'> </div>
+            </a>";
+        }
+=======
 function getPro(){
 
 global $db;
@@ -125,30 +132,7 @@ else{
 $product_psp_price = "";
 
 $product_price = "$$pro_price";
-
-}
-
-
-if($pro_label == ""){
-
-
-}
-else{
-
-$product_label = "
-
-<a class='label sale' href='#' style='color:black; font-size:11px;'>
-
-<div class='thelabel'>$pro_label</div>
-
-<div class='label-background'> </div>
-
-</a>
-
-";
-
-}
-
+>>>>>>> 04f60ba9908614988aa6bf3f510473420e3b3cfb
 
 echo "
 
@@ -164,6 +148,13 @@ echo "
 
 <div class='text' >
 
+<center>
+
+
+
+</center>
+
+
 
 <h6 ><a style='color:#000000; font-size:18px;' href='$pro_url' >$pro_title</a></h6>
 
@@ -171,7 +162,9 @@ echo "
 
 <p class='buttons' >
 
-<a href='$pro_url' class='btn btn-danger' style='background-color:#f9d030; colorblack; font-size: 15px'>
+<a href='$pro_url' class='btn btn-default' style='background-color:#fc32c3; color:white; font-size: 15px' >View Details</a>
+
+<a href='$pro_url' class='btn' style='background-color:#fc32c3; color:white; font-size: 15px'>
 
 <i class='fa fa-shopping-cart'></i> Add To Cart
 
@@ -515,4 +508,5 @@ echo "' >".'Last Page'."</a></li>";
 
 
 
+>>>>>>> 04f60ba9908614988aa6bf3f510473420e3b3cfb
 ?>

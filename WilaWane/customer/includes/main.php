@@ -1,129 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add your head content here -->
+
+    <!-- Example: -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/main.css">
+
 </head>
 <body>
+ <!-- ======= Header ======= -->
+ <header id="header" class="header fixed-top" data--offset="0">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
 
-  <header class="page-header">
-    <!-- topline -->
-    <div class="page-header__topline">
-      <div class="container clearfix">
+        <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="../assets/img/hero-carousel/Wila_Wane.svg" alt=""> 
+        
+        </a>
+       
+        
+        </nav><!-- .navbar -->
 
-        <div class="currency">
-          <a class="currency__change" href="my_account.php?my_orders">
-          <?php
-          if(!isset($_SESSION['customer_email'])){
-          echo "Welcome :Guest"; 
-         } 
-          else
-          { 
-              echo "Welcome : " . $_SESSION['customer_email'] . "";
-            }
+        
+
+        <div>
+          <?PHP
+        if (isset($_SESSION['customer_email'])) {
+    $customer_email = $_SESSION['customer_email'];
+    $get_customer = "SELECT * FROM customers WHERE customer_email='$customer_email'";
+    $run_customer = mysqli_query($con, $get_customer);
+    $row_customer = mysqli_fetch_array($run_customer);
+    $user_name = $row_customer['customer_name'];
+    $user_id = $row_customer['customer_id'];
+    echo "Welcome : $user_name";
+} else {
+    echo "Welcome : Guest";
+
+}
+
 ?>
-          </a>
-        </div>
 
-        <div class="basket">
-          <a href="../cart.php" class="btn btn--basket">
-            <i class="icon-basket"></i>
-            <?php items(); ?> items
-          </a>
-        </div>
+            </div>
+            <?php if (isset($_SESSION['customer_email'])) : ?>
+        <a href="logout.php">Logout</a>
+    <?php endif; ?> 
+        <div class="basket" style="color: #fc32c3; font-size:30px;">
         
-        
-        <ul class="login">
+            <a href="cart.php" class="btn btn--basket" style="color: #fc32c3; font-size:25px;">
+            <i style="color: #fc32c3; font-size:20px;" class="bi bi-cart4"></i>
+              <?php items(); ?> 
+            </a>
+          </div>
 
-          <li class="login__item">
-          <?php
-          if(!isset($_SESSION['customer_email'])){
-            echo '<a href="../customer_register.php" class="login__link">Register</a>';
-          } 
-            else
-            { 
-                echo '<a href="my_account.php?my_orders" class="login__link">My Account</a>';
-            }   
-?>  
-          </li>
+      </div>  
+    </header><!-- End Header -->
 
 
-          <li class="login__item">
-          <?php
-          if(!isset($_SESSION['customer_email'])){
-            echo '<a href="../checkout.php" class="login__link">Sign In</a>';
-          } 
-            else
-            { 
-                echo '<a href="../logout.php" class="login__link">Log out</a>';
-            }   
-?>  
-            
-          </li>
-        </ul>
-      
-      
-      </div>
-    </div>
-    <!-- bottomline -->
-    <div class="page-header__bottomline">
-      <div class="container clearfix">
+    <!-- Add the rest of your body content here -->
 
-        <div class="logo">
-          <a class="logo__link" href="../index.php">
-            <img class="logo__img" src="images/logo.png" alt="Avenue fashion logotype" width="237" height="19">
-          </a>
-        </div>
-
-        <nav class="main-nav">
-          <ul class="categories">
-
-            <li class="categories__item">
-              <a class="categories__link categories__link--active" href="shop.php">
-                Shop
-              </a>
-            </li>
-
-
-          <li class="categories__item">
-              <a class="categories__link" href="#">
-                My Account
-                <i class="icon-down-open-1"></i>
-              </a>
-              <div class="dropdown dropdown--lookbook">
-                <div class="clearfix">
-                  <div class="dropdown__half">
-                    <div class="dropdown__heading">Account Settings</div>
-                    <ul class="dropdown__items">
-                      <li class="dropdown__item">
-                        <a href="#" class="dropdown__link">My Wishlist</a>
-                      </li>
-                      <li class="dropdown__item">
-                        <a href="#" class="dropdown__link">My Orders</a>
-                      </li>
-                      <li class="dropdown__item">
-                        <a href="#" class="dropdown__link">View Shopping Cart</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="dropdown__half">
-                    <div class="dropdown__heading"></div>
-                    <ul class="dropdown__items">
-                      <li class="dropdown__item">
-                        <a href="#" class="dropdown__link">Edit Your Account</a>
-                      </li>
-                      <li class="dropdown__item">
-                        <a href="#" class="dropdown__link">Change Password</a>
-                      </li>
-                      <li class="dropdown__item">
-                        <a href="#" class="dropdown__link">Delete Account</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-             
-
-              </div>
-
-            </li>
-
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+</body>
+</html>

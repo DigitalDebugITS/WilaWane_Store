@@ -118,15 +118,15 @@
 		<div class="container clearfix">
 
 			<div class="copyright">
-				&copy; 2018 Avenue Fashion&trade;
+				&copy; Wila Wane&trade;
 			</div>
 
 			<div class="developer">
-				Dev by Yasser Dalouzi
+				Digital Debug IT Solutions
 			</div>
 
 			<div class="designby">
-				Design by Yasser Dalouzi
+			Digital Debug IT Solutions
 			</div>
 		</div>
 	</div>

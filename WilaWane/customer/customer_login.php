@@ -86,7 +86,7 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -113,7 +113,7 @@ function submitForm() {
     return true; 
 }
 
-</script>
+</script> -->
 
 </body>
 </html>
@@ -131,7 +131,6 @@ $select_customer = "select * from customers where customer_email='$customer_emai
 
 $run_customer = mysqli_query($con,$select_customer);
 
-$get_ip = getRealUserIp();
 
 $check_customer = mysqli_num_rows($run_customer);
 
@@ -153,7 +152,7 @@ if($check_customer==1 AND $check_cart==0){
 
 $_SESSION['customer_email']=$customer_email;
 
-echo "<script>alert('You are Logged In')</script>";
+//echo "<script>alert('You are Logged In')</script>";
 
 echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
 
