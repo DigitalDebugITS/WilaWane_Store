@@ -98,7 +98,7 @@
     $user_id = $row_customer['customer_id'];
     echo "Welcome : <a href='customer/my_account.php?customer_id=$user_id'>$user_name</a>";
 } else {
-    echo "Welcome : Guest";
+    echo " <i class='bi bi-person-circle'></i> Guest";
 }?>
 
             </div>
@@ -113,8 +113,8 @@
             </a>
           </div>
 
-      </div>
-    </header><!-- End Header -->
+    </div>
+  </header><!-- End Header -->
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
