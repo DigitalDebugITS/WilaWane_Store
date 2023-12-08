@@ -9,9 +9,10 @@ include("functions/functions.php");
 
 <?php
 
-if(isset($_GET['c_id'])){
+if(isset($_GET['c_id'])&&(isset($_GET['invoice_no']))){
 
 $customer_id = $_GET['c_id'];
+$invoice_no= $_GET['invoice_no']
 
 }
 
@@ -19,7 +20,7 @@ $ip_add = getRealUserIp();
 
 $status = "complete";
 
-$invoice_no = mt_rand();
+
 
 $select_cart = "select * from cart where ip_add='$ip_add'";
 

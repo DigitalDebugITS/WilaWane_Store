@@ -85,7 +85,7 @@ $run_p_cat = mysqli_query($con,$get_p_cat);
 
 $row_p_cat = mysqli_fetch_array($run_p_cat);
 
-$p_cat_title = $row_p_cat['p_cat_title'];
+//$p_cat_title = $row_p_cat['p_cat_title'];
 
 
 
@@ -638,15 +638,7 @@ $pro_img1 = $row_products['product_img1'];
 
 $pro_label = $row_products['product_label'];
 
-$manufacturer_id = $row_products['manufacturer_id'];
 
-$get_manufacturer = "select * from manufacturers where manufacturer_id='$manufacturer_id'";
-
-$run_manufacturer = mysqli_query($db,$get_manufacturer);
-
-$row_manufacturer = mysqli_fetch_array($run_manufacturer);
-
-$manufacturer_name = $row_manufacturer['manufacturer_title'];
 
 $pro_psp_price = $row_products['product_psp_price'];
 
@@ -704,11 +696,7 @@ echo "
 
 <div class='text' >
 
-<center>
 
-<p class='btn btn-warning'> $manufacturer_name </p>
-
-</center>
 
 <hr>
 

@@ -174,13 +174,10 @@ $<?php echo $sub_total; ?>.00
 
 <div class="form-group"><!-- form-group Starts -->
 
-<label>Coupon Code : </label>
-
-<input type="text" name="code" class="form-control">
 
 </div><!-- form-group Ends -->
 
-<input class="btn btn-primary" type="submit" name="apply_coupon" value="Apply Coupon Code" >
+ >
 
 </div><!-- form-inline pull-right Ends -->
 
@@ -191,7 +188,7 @@ $<?php echo $sub_total; ?>.00
 
 <div class="pull-left"><!-- pull-left Starts -->
 
-<a href="index.php" class="btn btn-default">
+<a href="e_shop.php" class="btn btn-default">
 
 <i class="fa fa-chevron-left"></i> Continue Shopping
 
@@ -359,7 +356,7 @@ echo @$up_cart = update_cart();
 
 <?php
 
-$get_products = "select * from products order by rand() LIMIT 0,3";
+$get_products = "select * from products order by rand() LIMIT 0,4";
 
 $run_products = mysqli_query($con,$get_products);
 
@@ -375,15 +372,15 @@ $pro_img1 = $row_products['product_img1'];
 
 $pro_label = $row_products['product_label'];
 
-$manufacturer_id = $row_products['manufacturer_id'];
+// $manufacturer_id = $row_products['manufacturer_id'];
 
-$get_manufacturer = "select * from manufacturers where manufacturer_id='$manufacturer_id'";
+// $get_manufacturer = "select * from manufacturers where manufacturer_id='$manufacturer_id'";
 
-$run_manufacturer = mysqli_query($db,$get_manufacturer);
+// $run_manufacturer = mysqli_query($db,$get_manufacturer);
 
-$row_manufacturer = mysqli_fetch_array($run_manufacturer);
+// $row_manufacturer = mysqli_fetch_array($run_manufacturer);
 
-$manufacturer_name = $row_manufacturer['manufacturer_title'];
+// $manufacturer_name = $row_manufacturer['manufacturer_title'];
 
 $pro_psp_price = $row_products['product_psp_price'];
 
@@ -441,11 +438,7 @@ echo "
 
 <div class='text' >
 
-<center>
 
-<p class='btn btn-warning'> $manufacturer_name </p>
-
-</center>
 
 <hr>
 
