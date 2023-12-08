@@ -11,8 +11,7 @@
           crossorigin="anonymous">
 
     <title> Sign in </title>
-    <!-- Libraries -->
-    <!-- Main CSS -->
+
     <link rel="stylesheet" href="styles/Loginform.css">
     <!-- Aos for animation -->
     <link  rel="shortcut icon" href="Logo.png"/>
@@ -39,7 +38,7 @@
 </header>
 <h1>Login</h1>
 <div class="d-flex justify-content-center">
-    <form action="checkout.php" method="post" id="login" onsubmit="return submitForm();">
+    <form action="../checkout.php" method="post" id="login" onsubmit="return submitForm();">
         <div class="row">
             <div class="col-75">
                 <div class="container">
@@ -57,7 +56,7 @@
                 <div>
                 <input style="font-size: 24px;" type="submit" name="login" value="Login" class="btn btn-primary" onclick="submitForm()">  </div>
             <div>        
-            <div class="g-recaptcha" data-sitekey="6LfC9wkpAAAAAB8i9IK4WuiQWPsNsQa1lFhMOqsr" ata-callback="submitForm"></div>
+            <!-- <div class="g-recaptcha" data-sitekey="6LfC9wkpAAAAAB8i9IK4WuiQWPsNsQa1lFhMOqsr" ata-callback="submitForm"></div> -->
 
         <a href="forgot_pass.php">  Forgot Password?</a>
         </div>

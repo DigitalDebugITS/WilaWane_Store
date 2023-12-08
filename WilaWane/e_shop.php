@@ -67,7 +67,7 @@ include("functions/functions.php");
 
 
            
-            <li><a class="nav-link " href="#">Home</a></li>
+          <li><a class="nav-link " href="#">Home</a></li>
           <li><a class="nav-link " href="index.html#about">About</a></li>
           <li><a class="nav-link " href="index.html#services">Services</a></li>
           <li><a class="nav-link " href="index.html#portfolio">Portfolio</a></li>
@@ -102,7 +102,6 @@ include("functions/functions.php");
     
      
   </section>
-
   <main id="main">
 
   <div id="content" class="container"><!-- container Starts -->
@@ -114,8 +113,6 @@ include("functions/functions.php");
     getPro();
 
     ?>
-
-            <!-- Tab Content -->
           
           </div>
 

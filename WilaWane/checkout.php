@@ -4,7 +4,7 @@ session_start();
 
 include("includes/db.php");
 
-// include("functions/functions.php");
+include("functions/functions.php");
 // include("includes/main.php");
 
 ?>
@@ -14,7 +14,7 @@ include("includes/db.php");
 
 if(!isset($_SESSION['customer_email'])){
 
-include("customer/customer_login.php");
+include("customer_login.php");
 
 
 }else{
