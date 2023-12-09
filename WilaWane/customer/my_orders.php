@@ -28,7 +28,7 @@ $run_orders = mysqli_query($con, $get_orders);
     <h1>My Orders</h1>
     <p class="lead"> Your orders in one place.</p>
     <p class="text-muted">
-        If you have any questions, please feel free to <a href="../contact.php">contact us,</a> our customer service center is working for you 24/7.
+        If you have any questions, please feel free to <a href="../contact.php">contact us.</a> 
     </p>
 </center><!-- center Ends -->
 
@@ -43,7 +43,7 @@ $run_orders = mysqli_query($con, $get_orders);
                 <th>Amount</th>
                 <th>Invoice</th>
                 <th>Qty</th>
-                <th>Size</th>
+               
                 <th>Order Date</th>
             </tr>
         </thead><!-- thead Ends -->
@@ -74,7 +74,7 @@ $run_orders = mysqli_query($con, $get_orders);
                     <td>$<?php echo $due_amount; ?></td>
                     <td><?php echo $invoice_no; ?></td>
                     <td><?php echo $qty; ?></td>
-                    <td><?php echo $size; ?></td>
+                    
                     <td><?php echo $order_date; ?></td>
                     <!-- Uncomment the lines below if needed -->
                     <!--
@@ -89,12 +89,12 @@ $run_orders = mysqli_query($con, $get_orders);
     </table><!-- table table-bordered table-hover Ends -->
 
     <!-- Add pagination links -->
-    <ul class="pagination">
+    <!-- <ul class="pagination">
         <?php
         $totalPages = ceil($i / $recordsPerPage);
         for ($page = 1; $page <= $totalPages; $page++) {
             echo "<li class='" . ($currentPage == $page ? 'active' : '') . "'><a href='my_account.php?my_orders&page=$page'>$page</a></li>";
         }
         ?>
-    </ul>
+    </ul> -->
 </div><!-- table-responsive Ends -->

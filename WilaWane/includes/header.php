@@ -40,8 +40,7 @@ include("functions/functions.php");
   
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
+  
     <style>
         /* Add your custom styles for the cart page */
         body {

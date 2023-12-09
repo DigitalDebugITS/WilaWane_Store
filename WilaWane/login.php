@@ -58,7 +58,7 @@
                 <input style="font-size: 24px;" type="submit" name="login" value="Login" class="btn btn-primary" onclick="submitForm()">  </div>
             <div>        
             <div class="g-recaptcha" data-sitekey="6LfC9wkpAAAAAB8i9IK4WuiQWPsNsQa1lFhMOqsr" ata-callback="submitForm"></div>
-
+            Don't have an account?  <a href="customer_register.php"> Signup</a><br>
         <a href="forgot_pass.php">  Forgot Password?</a>
         </div>
         </div>
@@ -161,9 +161,9 @@ else {
 
 $_SESSION['customer_email']=$customer_email;
 
-echo "<script>alert('You are Logged In')</script>";
+//echo "<script>alert('You are Logged In')</script>";
 
-echo "<script>window.open('checkout.php','_self')</script>";
+echo "<script>window.open('e_shop.php','_self')</script>";
 
 } 
 

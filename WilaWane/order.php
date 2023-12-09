@@ -1,7 +1,7 @@
 <?php
 include("includes/db.php");
 include("includes/header.php");
-include("functions/functions.php");
+//include("functions/functions.php");
 //include("sendmail.php");
 
 if (isset($_GET['c_id']) && isset($_GET['invoice_no'])) {

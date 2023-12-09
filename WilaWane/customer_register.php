@@ -6,11 +6,8 @@ include("includes/db.php");
 // include("includes/header.php");
 include("functions/functions.php");
 // include("includes/main.php");
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 52fad35c0d899a0c82b6c11e258c7f8427804b79
 ?>
   
 <!doctype html>
@@ -55,7 +52,6 @@ include("functions/functions.php");
 </header>
 
 
-<<<<<<< HEAD
   <h1>Sign up Form</h1>
   <div class="d-flex justify-content-center">
   <form method="post" onsubmit="return validateForm();" id="login" enctype="multipart/form-data">
@@ -116,153 +112,11 @@ include("functions/functions.php");
 function validateForm() {
     var password = document.getElementById("pass").value;
     var repeatPassword = document.getElementById("con_pass").value;
-=======
-  
-<!doctype html>
-<html lang="en">
-  <head>
-    
-      <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
- 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Sign up</title>
-<!--Libraries-->
- <!--main css-->
- <link rel="stylesheet" href="styles/Loginform.css">
- <!--Aos for animation-->
- <link  rel="shortcut icon" href="Logo.png"
-    />
- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<!--Icons-->  
-<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-<!--Google fonts-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:wght@300;400;500;600;700;800;900&family=Red+Hat+Display:wght@300;400&family=Roboto&family=Satisfy&display=swap" rel="stylesheet">
-  
-
-<!--Google recaptcha-->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-</head>
-  <body>
-  <header>
-  <a href="index.html">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img style="height:70px; width:70px;" src="assets/img/hero-carousel/Wila_Wane.svg" alt=""> 
-       
-      </a>
-</header>
-
-
-  <h1>Sign up Form</h1>
-  <form Method="post" onsubmit="return validateForm();"  id="login">
-        <div class="row">
-            <div class="col-75">
-              <div class="container">
-                <form action="/action_page.php">
-          
-                  <div class="row">
-                    <div class="col-50">
-                      <label for="Id"> Name</label>
-                      <input type="text" class="form-control" name="c_name" required>
-                    </div>
-                  
-                    <div class="col-50">
-                      <label for="PN">Phone Number</label>
-                      <input type="text" class="form-control" name="c_contact" required>
-
-                      <label for="email">Email</label>
-                      <input type="text" class="form-control" name="c_email" required>
-
-                      <div class="row">
-                        <div class="col-50">
-                          <label for="password">Password</label>
-                          <input type="password" class="form-control" id="pass" name="c_pass" required>
-                        </div>
-                        <div>
-                            <label for="repeat password">Repeat Password</label>
-                            <input type="password" class="form-control confirm" id="con_pass" required>
-                      </div>
-                      <div>
-                      <label> Customer Country </label>
-                        <input type="text" class="form-control" name="c_country" required>
-                      </div>
-                    </div>
-
-                    <div class="form-group"><!-- form-group Starts -->
-
-                    <label> Customer City </label>
-
-                    <input type="text" class="form-control" name="c_city" required>
-
-                    </div><!-- form-group Ends -->
-
-                    <div class="form-group"><!-- form-group Starts -->
-
-                    <label> Customer Address </label>
-
-                    <input type="text" class="form-control" name="c_address" required>
-
-                    </div><!-- form-group Ends -->
-
-                    <div class="form-group"><!-- form-group Starts -->
-
-                    <label> Customer Image </label>
-
-                    <input type="file" class="form-control" name="c_image" required>
-
-                    </div>
-
-                  <div class="g-recaptcha" data-sitekey="6LfC9wkpAAAAAB8i9IK4WuiQWPsNsQa1lFhMOqsr" ata-callback="submitForm"></div>
-<div>
-                  <label>
-                  <input style="font-size: 24px;" type="submit" value="Signup" class="btn" onclick="validateForm();">
-
-</div>
-                </form>
-              </div>
-
-              <script>
-function validateForm() {
-    var password = document.getElementById("pass").value;
-    var repeatPassword = document.getElementById("repeatPass").value;
->>>>>>> 52fad35c0d899a0c82b6c11e258c7f8427804b79
 
     if (password.trim() === "" || repeatPassword.trim() === "") {
         alert("Passwords cannot contain blank spaces.");
         return false;
     }
-<<<<<<< HEAD
-
-    if (password.length < 8) {
-        alert("Password must be at least 8 characters long.");
-        return false;
-    }
-
-    if (password !== repeatPassword) {
-        alert("Passwords do not match. Please make sure your passwords match.");
-        return false;
-    }
-
-    return true;
-}
-</script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html>
-=======
->>>>>>> 52fad35c0d899a0c82b6c11e258c7f8427804b79
 
    
     if (password.length < 8) {
@@ -270,8 +124,6 @@ function validateForm() {
         return false;
     }
 
-<<<<<<< HEAD
-=======
     if (password !== repeatPassword) {
         alert("Passwords do not match. Please make sure your passwords match.");
         return false;
@@ -300,7 +152,6 @@ if (response.length === 0) {
 </html>
 
 
->>>>>>> 52fad35c0d899a0c82b6c11e258c7f8427804b79
 <script src="js/jquery.min.js"> </script>
 
 <script src="js/bootstrap.min.js"></script>
@@ -361,13 +212,9 @@ if (isset($_POST['register'])) {
         } else {
             $_SESSION['customer_email'] = $c_email;
             echo "<script>alert('You have been Registered Successfully')</script>";
-            echo "<script>window.open('customer/customer_login.php','_self')</script>";
+            echo "<script>window.open('customer/e_shop.php','_self')</script>";
         }
     }
 } 
 ?>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 52fad35c0d899a0c82b6c11e258c7f8427804b79

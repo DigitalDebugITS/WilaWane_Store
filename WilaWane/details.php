@@ -40,7 +40,7 @@ if ($check_product == 0) {
     $get_p_cat = "select * from product_categories where p_cat_id='$p_cat_id'";
     $run_p_cat = mysqli_query($con, $get_p_cat);
     $row_p_cat = mysqli_fetch_array($run_p_cat);
-    $p_cat_title = $row_p_cat['p_cat_title'];
+    //$p_cat_title = $row_p_cat['p_cat_title'];
   }
 ?>
 <!DOCTYPE html>
@@ -430,7 +430,7 @@ $query = "insert into cart (p_id,ip_add,qty,p_price) values ('$p_id','$ip_add','
 
 $run_query = mysqli_query($db,$query);
 
-echo "<script>alert('This Product has been added to cart')</script>";
+//echo "<script>alert('This Product has been added to cart')</script>";
 
 
 echo "<script>window.open('$pro_url','_self')</script>";
@@ -538,15 +538,6 @@ $pro_img1 = $row_products['product_img1'];
 
 $pro_label = $row_products['product_label'];
 
-$manufacturer_id = $row_products['manufacturer_id'];
-
-$get_manufacturer = "select * from manufacturers where manufacturer_id='$manufacturer_id'";
-
-$run_manufacturer = mysqli_query($db,$get_manufacturer);
-
-$row_manufacturer = mysqli_fetch_array($run_manufacturer);
-
-$manufacturer_name = $row_manufacturer['manufacturer_title'];
 
 $pro_psp_price = $row_products['product_psp_price'];
 

@@ -96,11 +96,7 @@ $mail->Body = "Thank you for your order!\n\nOrder Details:\n$order_details";
         if ($mail->send()) {
             echo 'Email sent successfully.';
             
-            // Output invoice number from URL
-            echo "Invoice Number from URL: " . $_GET['invoice_no'];
-
-            // Output invoice number from the database query
-            echo "Invoice Number from Database: " . $invoice_no;
+       
         } else {
             echo 'Email could not be sent.';
             echo 'Mailer Error: ' . $mail->ErrorInfo;

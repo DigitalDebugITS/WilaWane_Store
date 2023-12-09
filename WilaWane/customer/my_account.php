@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if (!isset($_SESSION['customer_email'])) {
@@ -7,76 +6,59 @@ if (!isset($_SESSION['customer_email'])) {
 } else {
     include("includes/db.php");
     include("../includes/header.php");
-    include("functions/functions.php");
     include("includes/main.php");
-    ?>
+?>
 
-   
-
-    <div id="content"><!-- content Starts -->
-        <div class="container"><!-- container Starts -->
-            
-
-            <div class="col-md-3"><!-- col-md-3 Starts -->
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
                 <?php include("includes/sidebar.php"); ?>
-            </div><!-- col-md-3 Ends -->
+            </div>
 
-            <div class="col-md-9"><!--- col-md-9 Starts -->
-                <div class="box"><!-- box Starts -->
+            <div class="col-md-9">
+                <div class="box">
                     <?php
-                   
-
                     if (isset($_GET['my_orders'])) {
                         include("my_orders.php");
-                    }
-
-                    if (isset($_GET['pay_offline'])) {
+                    } elseif (isset($_GET['pay_offline'])) {
                         include("pay_offline.php");
-                    }
-
-                    if (isset($_GET['edit_account'])) {
+                    } elseif (isset($_GET['edit_account'])) {
                         include("edit_account.php");
-                    }
-
-                    if (isset($_GET['change_pass'])) {
+                    } elseif (isset($_GET['change_pass'])) {
                         include("change_pass.php");
-                    }
-
-                    if (isset($_GET['delete_account'])) {
+                    } elseif (isset($_GET['delete_account'])) {
                         include("delete_account.php");
-                    }
-
-                    if (isset($_GET['my_wishlist'])) {
+                    } elseif (isset($_GET['my_wishlist'])) {
                         include("my_wishlist.php");
-                    }
-
-                    if (isset($_GET['delete_wishlist'])) {
+                    } elseif (isset($_GET['delete_wishlist'])) {
                         include("delete_wishlist.php");
                     }
                     ?>
-                </div><!-- box Ends -->
-            </div><!--- col-md-9 Ends -->
-        </div><!-- container Ends -->
-    </div><!-- content Ends -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Button to call sendmail.php -->
-    <form id="sendMailForm" action="../sendmail.php" method="get">
-        <input type="hidden" name="c_id" value="<?php echo $customer_id; ?>">
-        <input type="hidden" name="invoice_no" value="<?php echo $invoice_no; ?>">
-        <button type="button" onclick="sendMail()">Send Email</button>
-    </form>
+<!-- Button to call sendmail.php -->
+<form id="sendMailForm" action="../sendmail.php" method="get">
+    <input type="hidden" name="c_id" value="<?php echo $customer_id; ?>">
+    <input type="hidden" name="invoice_no" value="<?php echo $invoice_no; ?>">
+    <button type="button" onclick="sendMail()">Send Email</button>
+</form>
 
-    <?php
-    include("../includes/footer.php");
-    ?>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    </body>
-    </html>
-    <?php
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<?php
 }
 ?>
+
 <script>
     function sendMail() {
         document.getElementById("sendMailForm").submit();
