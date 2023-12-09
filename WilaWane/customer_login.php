@@ -154,7 +154,7 @@ $_SESSION['customer_email']=$customer_email;
 
 echo "<script>alert('You are Logged In')</script>";
 
-echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+echo "<script>window.open('e_shop.php','_self')</script>";
 
 }
 else {
@@ -163,7 +163,7 @@ $_SESSION['customer_email']=$customer_email;
 
 echo "<script>alert('You are Logged In')</script>";
 
-echo "<script>window.open('checkout.php','_self')</script>";
+echo "<script>window.open('e_shop.php','_self')</script>";
 
 } 
 
