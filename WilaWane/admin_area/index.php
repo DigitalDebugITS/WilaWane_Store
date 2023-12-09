@@ -528,13 +528,25 @@ include("edit_store.php");
 
 }
 
+if(isset($_GET['create_post'])){
+
+    include("create_post.php");
+    
+    }
+
+
+    if(isset($_GET['manage_blog'])){
+
+        include("manage_blog.php");
+        
+        }
+
 ?>
+</div>
 
-</div><!-- container-fluid Ends -->
+</div>
 
-</div><!-- page-wrapper Ends -->
-
-</div><!-- wrapper Ends -->
+</div>
 
 <script src="js/jquery.min.js"></script>
 
