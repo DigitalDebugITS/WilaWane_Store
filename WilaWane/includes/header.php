@@ -37,9 +37,8 @@ include("functions/functions.php");
 
   <!-- Variables CSS Files. Uncomment your preferred color scheme -->
   <link href="assets/css/variables.css" rel="stylesheet">
-  
+  <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   
     <style>
         /* Add your custom styles for the cart page */
