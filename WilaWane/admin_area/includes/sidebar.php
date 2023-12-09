@@ -315,6 +315,24 @@ else {
 
 </li><!-- li Ends -->
 
+<li>
+    <a href="#" data-toggle="collapse" data-target="#blog">
+        <i class="fa fa-fw fa-pencil"></i> Blog
+        <i class="fa fa-fw fa-caret-down"></i>
+    </a>
+
+    <ul id="blog" class="collapse">
+        <li>
+            <a href="index.php?create_post"> Create post </a>
+        </li>
+        <li>
+            <a href="index.php?manage_blog"> Manage Blog </a>
+        </li>
+    </ul>
+</li>
+
+
+
 <li><!-- li Starts -->
 
 <a href="logout.php">

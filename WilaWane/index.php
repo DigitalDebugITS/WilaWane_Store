@@ -1,3 +1,35 @@
+<?php
+// Assuming you have a database connection established
+include("includes/db.php");
+
+// Function to fetch blog posts from the database
+function getBlogPosts()
+{
+    global $con; // Make sure $con is available in this scope, adjust if necessary
+
+    $query = "SELECT * FROM blog ORDER BY date DESC LIMIT 3"; // Adjust the query based on your database structure
+
+    $result = mysqli_query($con, $query);
+
+    $blogPosts = array();
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $blogPosts[] = array(
+            'id' => $row['id'],
+            'image' => $row['image'],
+            'date' => $row['date'],
+            'author' => $row['author'],
+            'title' => $row['Title'],
+            'content' => $row['Content']
+            // Add more fields as needed
+        );
+    }
+
+    return $blogPosts;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -442,14 +474,6 @@
   </div>
 </section><!-- End Features Section -->
 
-    <!-- ======= Services Section ======= -->
-    
-
-   
-   
-   
-  
-
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
       <div class="container-fluid" data-aos="fade-up">
@@ -753,133 +777,93 @@
       </div>
     </section> -->
 
-    <!-- ======= Team Section ======= -->
-    <!-- <section id="team" class="team">
-      <div class="container" data-aos="fade-up">
+   <!-- ======= Team Section ======= -->
+   
+   <section id="team" class="team">
+    <div class="container" data-aos="fade-up">
+  
+      <div class="section-header text-center">
+        <h2>Our Team</h2>
+        <p>At Wila Wane Store, our success is a result of the dedicated and talented individuals who make up our exceptional team. Each member contributes unique skills and expertise, creating a dynamic and collaborative work environment. Meet the visionaries behind our brand:
 
-        <div class="section-header">
-          <h2>Our Team</h2>
-          <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
-        </div>
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div>
-<!-- 
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="600">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+        <br>  Dr. Kayanda Besa (Founder): A visionary leader with a passion for innovation, Dr. Kayanda Besa is the driving force behind Wila Wane Store. Her commitment to excellence and forward-thinking approach sets the tone for our company's success.
+          
+        <br>  Peter Mukuka (Co-Founder): As the Co-Founder of Wila Wane Store, Peter Mukuka brings a wealth of experience and strategic insight to the team. His collaborative spirit and dedication to customer satisfaction are integral to our continued growth.
+          
+          Discover more about the minds shaping the future of Wila Wane Store, each contributing to our shared mission of delivering outstanding products and services.</p>
       </div>
-    </section>  -->
+  
+      <div class="row gy-5 justify-content-center">
+  
+        <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
+          <div class="team-member">
+            <div class="member-img">
+              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="member-info">
+              <div class="social">
+                <a href="https://web.facebook.com/kaybesa"><i class="bi bi-facebook"></i></a>
+                <a href="https://linkedin.com/in/kayanda-besa-86168680"><i class="bi bi-linkedin"></i></a>
+              </div>
+              <h4>Dr Kayanda Besa</h4>
+              <span>Founder</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="400">
+          <div class="team-member">
+            <div class="member-img">
+              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="member-info">
+              <div class="social">
+                <a href="https://web.facebook.com/PeterChisi/"><i class="bi bi-facebook"></i></a>
+                <a href="https://linkedin.com/in/peter-mukuka-5834868a
+                "><i class="bi bi-linkedin"></i></a>
+              </div>
+              <h4>Peter Mukuka</h4>
+              <span>Co-Founder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
     <!-- ======= Recent Blog Posts Section ======= -->
-    <!-- <section id="recent-blog-posts" class="recent-blog-posts">
+<section id="recent-blog-posts" class="recent-blog-posts">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Blog</h2>
+      <p>Recent posts from our Blog</p>
+    </div>
 
-      <div class="container" data-aos="fade-up">
+    <div class="row">
+      <?php
+      // Assuming you have a function to fetch blog posts, replace 'getBlogPosts' with your actual function
+      $blogPosts = getBlogPosts();
 
-        <div class="section-header">
-          <h2>Blog</h2>
-          <p>Recent posts form our Blog</p>
+      foreach ($blogPosts as $post) :
+      ?>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="post-box">
+          <div class="post-img"><img src="admin_area/images/<?php echo $post['image']; ?>" class="img-fluid" alt="No Image added"></div>
+            <div class="meta">
+            <span class="post-date"><?php echo date('D, M j, Y H:i', strtotime($post['date'])); ?></span>
+              <span class="post-author"> / <?php echo $post['author']; ?></span>
+            </div>
+            <h3 class="post-title"><?php echo $post['title']; ?></h3>
+            <p><?php echo $post['content']; ?></p>
+            <a href="blog-details.php?id=<?php echo $post['id']; ?>" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
         </div>
+      <?php endforeach; ?>
 
-        <div class="row">
+    </div>
+  </div>
+</section>
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Tue, December 12</span>
-                <span class="post-author"> / Julia Parker</span>
-              </div>
-              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-              <p>Illum voluptas ab enim placeat. Adipisci enim velit nulla. Vel omnis laudantium. Asperiores eum ipsa est officiis. Modi cupiditate exercitationem qui magni est...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Fri, September 05</span>
-                <span class="post-author"> / Mario Douglas</span>
-              </div>
-              <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-              <p>Voluptatem nesciunt omnis libero autem tempora enim ut ipsam id. Odit quia ab eum assumenda. Quisquam omnis aliquid necessitatibus tempora consectetur doloribus...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Tue, July 27</span>
-                <span class="post-author"> / Lisa Hunter</span>
-              </div>
-              <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-              <p>Quia nam eaque omnis explicabo similique eum quaerat similique laboriosam. Quis omnis repellat sed quae consectetur magnam veritatis dicta nihil...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section> -->
-    <!-- End Recent Blog Posts Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -890,11 +874,7 @@
         </div>
 
       </div>
-<!-- 
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-      </div>End Google Maps -->
-
+      
       <div class="container">
 
         <div class="row gy-5 gx-lg-5">
