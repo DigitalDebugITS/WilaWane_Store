@@ -2,10 +2,9 @@
 // Assuming you have a database connection established
 include("includes/db.php");
 
-// Function to fetch blog posts from the database
 function getBlogPosts()
 {
-    global $con; // Make sure $con is available in this scope, adjust if necessary
+    global $con;
 
     $query = "SELECT * FROM blog ORDER BY date DESC LIMIT 3"; // Adjust the query based on your database structure
 
@@ -99,13 +98,11 @@ function getBlogPosts()
            
             <li><a class="nav-link scrollto" href="#">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="index.html#products">Products</a></li>
+          <li><a class="nav-link scrollto" href="index.html#faq">Faq</a></li>
           <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
            <!-- <li><a href="blog.html">Blog</a></li> -->
-          <li><a class="nav-link scrollto" href="index.html#features">Values</a></li>
-          <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
-          
+          <li><a class="nav-link scrollto" href="index.html#blog">Blog</a></li>    
           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
           <li><a class="nav-link " href="e_shop.php">Shop</a></li>
         </ul>
@@ -151,49 +148,61 @@ function getBlogPosts()
             growth and development.</p>
         </div>
         <section id="featured-services" class="featured-services">
+        <div class="section-header">
+        <h2 style="font-family: 'Buffalo', sans-serif;">Our Mission</h2>
+          <p style="font-size: larger;">To provide good quality children’s educational
+wooden toys and books that inspire creativity,
+imagination, learning and fun.</p>
+        </div>
+        <div class="section-header">
+        <h2 style="font-family: 'Buffalo', sans-serif;">Our Vision</h2>
+          <p style="font-size: larger;">To become the ultimate go-to destination for
+parents, caregivers and educators with who aspire
+to provide their children with unparalleled play,
+learning, and literary experiences.</p>
+        </div>
+        <div class="section-header">
+        <h2 style="font-family: 'Buffalo', sans-serif;">Our Values</h2>
+        </div>
           <div class="container">
       
               <div class="row gy-4">
       
                   <div class="clients-slider swiper">
                       <div class="swiper-wrapper align-items-center">
-      
-                          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
+                     <h2 style="font-family: 'Buffalo', sans-serif;"></h2>     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
                               <div class="service-item position-center">
-                                  <div class="icon"><i class="ri-reactjs-line"></i></div>
-                                  <h4>Intergrity</h4>
+                                  
+                              <h4><div class="icon"><i class="ri-reactjs-line"></i></div> Intergrity</h4>
                                   <p>We are honest and trustworthy in our dealings. We say what we mean and mean what we say.</p>
                               </div>
                           </div><!-- End Service Item -->
       
                           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
                               <div class="service-item position-center">
-                                  <div class="icon"><i class="ri-award-fill"></i></div>
-                                  <h4><a href="" class="stretched-link">Quality</a></h4>
+                                  <h4><div class="icon"><i class="ri-award-fill"></i></div>Quality</h4>
                                   <p>We care about supplying good quality products for our customers, toys that are durable and can be enjoyed for many years.</p>
                               </div>
                           </div><!-- End Service Item -->
       
                           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
                               <div class="service-item position-center">
-                                  <div class="icon"><i class="ri-emotion-happy-line"></i></div>
-                                  <h4><a href="" class="stretched-link">Fun</a></h4>
+                                  
+                                  <h4><div class="icon"><i class="ri-emotion-happy-line"></i></div>Fun</h4>
                                   <p>We believe in learning through play, our supply of children toys and books encourage learning in a fun way.</p>
                               </div>
                           </div><!-- End Service Item -->
       
                           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
                               <div class="service-item position-center">
-                                  <div class="icon"><i class="ri-hand-heart-fill"></i></div>
-                                  <h4><a href="" class="stretched-link">Customer Care</a></h4>
+                                  <h4> <div class="icon"><i class="ri-hand-heart-fill"></i></div>Customer Care</h4>
                                   <p>We give quality customer experience, we are attentive, polite, and always serve with a smile.</p>
                               </div>
                           </div>
                           
                           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
                               <div class="service-item position-center">
-                                  <div class="icon"><i class="ri-file-search-line"></i></div>
-                                  <h4><a href="" class="stretched-link">Our Mission</a></h4>
+                                  <h4> <div class="icon"><i class="ri-file-search-line"></i></div>Our Mission</a></h4>
                                   <p>We give quality customer experience, we are attentive, polite, and always serve with a smile.</p>
                               </div>
                           </div><!-- End Service Item -->
@@ -215,7 +224,7 @@ function getBlogPosts()
           </div>
 
           <div class="col-lg-7">
-            <h3 class="pt-0 pt-lg-5">Why Choose Us?</h3>
+            <h2 style="font-family: 'Buffalo', sans-serif;">Why Choose Us?</h2>
 
        
 
@@ -356,7 +365,7 @@ function getBlogPosts()
 
     <!-- ======= Features Section ======= -->
     
-<section id="features" class="features">
+<section id="products" class="features">
   <div class="container" data-aos="fade-up">
       <ul class="nav nav-tabs row gy-4 d-flex">
 
@@ -483,7 +492,7 @@ function getBlogPosts()
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
             <div class="content px-xl-5">
-              <h3>Frequently Asked <strong>Questions</strong></h3>
+              <h2 style="font-family: 'Buffalo', sans-serif; color: #fc32c3;">Frequently Asked <strong>Questions</strong></h2>
               
             </div>
 
@@ -783,7 +792,7 @@ function getBlogPosts()
     <div class="container" data-aos="fade-up">
   
       <div class="section-header text-center">
-        <h2>Our Team</h2>
+        <h2 style="font-family: 'Buffalo', sans-serif;">Our Team</h2>
         <p>At Wila Wane Store, our success is a result of the dedicated and talented individuals who make up our exceptional team. Each member contributes unique skills and expertise, creating a dynamic and collaborative work environment. Meet the visionaries behind our brand:
 
         <br>  Dr. Kayanda Besa (Founder): A visionary leader with a passion for innovation, Dr. Kayanda Besa is the driving force behind Wila Wane Store. Her commitment to excellence and forward-thinking approach sets the tone for our company's success.
@@ -832,10 +841,10 @@ function getBlogPosts()
   
 
     <!-- ======= Recent Blog Posts Section ======= -->
-<section id="recent-blog-posts" class="recent-blog-posts">
+<section id="blog" class="recent-blog-posts">
   <div class="container" data-aos="fade-up">
     <div class="section-header">
-      <h2>Blog</h2>
+      <h2 style="font-family: 'Buffalo', sans-serif;">Blog</h2>
       <p>Recent posts from our Blog</p>
     </div>
 
@@ -870,7 +879,7 @@ function getBlogPosts()
       <div class="container">
 
         <div class="section-header">
-          <h2>Contact Us</h2>
+          <h2 style="font-family: 'Buffalo', sans-serif;">Contact Us</h2>
         </div>
 
       </div>
@@ -881,9 +890,7 @@ function getBlogPosts()
 
           <div class="col-lg-4">
 
-            <div class="info">
-              <h3>Get in touch</h3>
-             
+            <div class="info">          
 
               <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
