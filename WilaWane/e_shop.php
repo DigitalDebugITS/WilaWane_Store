@@ -72,7 +72,7 @@
 
 
            
-            <li><a class="nav-link " href="#">Home</a></li>
+            <li><a class="nav-link " href="index.php">Home</a></li>
             <li class="dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
     <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
