@@ -224,7 +224,7 @@ learning, and literary experiences.</p>
           </div>
 
           <div class="col-lg-7">
-            <h2 style="font-family: 'Buffalo', sans-serif;">Why Choose Us?</h2>
+            <h2 style="font-family: 'Buffalo', sans-serif;color: #F62AA0;">Why Choose Us?</h2>
 
        
 
@@ -237,7 +237,7 @@ learning, and literary experiences.</p>
                 <div class="d-flex align-items-center mt-4">
                   <i class="bi bi-check2" style="color: #F62AA0;"></i>
 
-                  <h4 style="font-family: 'Buffalo', sans-serif; font-size: 40px;">Unique Combination of Wooden Educational Toys and Storybooks:</h4>
+                  <h4 style="font-family: 'Buffalo', sans-serif; font-size: 30px;">Unique Combination of Wooden Educational Toys and Storybooks:</h4>
                 </div>
                 <p>At WilaWane Store, we offer a unique combination of high-quality wooden educational toys
                   and children's storybooks. This curated selection provides a one-stop shop for parents,
@@ -247,7 +247,7 @@ learning, and literary experiences.</p>
                 <div class="d-flex align-items-center mt-4">
                   <i class="bi bi-check2" style="color: #F62AA0;"></i>
 
-                  <h4 style="font-family: 'Buffalo', sans-serif; font-size: 40px;">Handpicked Items for Learning and Quality</h4>
+                  <h4 style="font-family: 'Buffalo', sans-serif; font-size: 30px;">Handpicked Items for Learning and Quality</h4>
                 </div>
                 <p>Every product in our store is carefully chosen to align with our mission of promoting learning through play and literature.
                    We prioritize items that foster skill development, creativity, and critical thinking,
@@ -256,7 +256,7 @@ learning, and literary experiences.</p>
                 <div class="d-flex align-items-center mt-4">
                   <i class="bi bi-check2" style="color: #F62AA0;"></i>
 
-                  <h4 style="font-family: 'Buffalo', sans-serif; font-size: 40px;">Personalized Approach</h4>
+                  <h4 style="font-family: 'Buffalo', sans-serif; font-size: 30px;">Personalized Approach</h4>
                 </div>
                 <p>With firsthand experience as parents and collaboration with certified early childhood experts,
                    our team provides a personalized touch. We guide customers through the purpose and suitability of each toy and book for different age groups, 
@@ -265,7 +265,7 @@ learning, and literary experiences.</p>
                   <div class="d-flex align-items-center mt-4">
                     <i class="bi bi-check2" style="color: #F62AA0;"></i>
 
-                    <h4 style="font-family: 'Buffalo', sans-serif; font-size: 40px;">Exceptional Customer Service</h4>
+                    <h4 style="font-family: 'Buffalo', sans-serif; font-size: 30px;">Exceptional Customer Service</h4>
                   </div>
                   <p>Committed to a seamless and enjoyable shopping experience, 
                     our friendly and knowledgeable customer service team is ready to assist at every step. We address queries, provide recommendations,
@@ -276,7 +276,7 @@ learning, and literary experiences.</p>
                     <div class="d-flex align-items-center mt-4">
                       <i class="bi bi-check2" style="color: #F62AA0;"></i>
 
-                      <h4 style="font-family: 'Buffalo', sans-serif; font-size: 40px;">Commitment to Sustainability</h4>
+                      <h4 style="font-family: 'Buffalo', sans-serif; font-size: 30px;">Commitment to Sustainability</h4>
                     </div>
                     <p>Recognizing the importance of environmental preservation, WilaWane Store prioritizes toys crafted from sustainable materials.
                        By choosing our store, customers actively contribute to reducing environmental impact and promoting eco-friendly practices for the benefit of future generations.</p>
