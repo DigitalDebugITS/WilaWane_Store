@@ -3142,7 +3142,7 @@ section {
 }
 
 .footer .footer-legal .credits a {
-  color:#f9d030;
+  color: var(--color-primary-light);
 }
 
 .footer .footer-legal .social-links a {
@@ -3163,4 +3163,42 @@ section {
 .footer .footer-legal .social-links a:hover {
   background: pink;
   text-decoration: none;
+}
+
+
+
+/*Blog!!!!!!!!!*/
+.post-box {
+  border: 1px solid #eaeaea; /* Add border to the post box */
+  padding: 20px; /* Add padding to the post box */
+  margin-bottom: 30px; /* Add margin between post boxes */
+}
+
+.post-img-container {
+  width: 100%; /* Set fixed width for the image container */
+  height: 200px; /* Set fixed height for the image container */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.post-img-container img {
+  width: 100%; /* Ensure the image fills the container horizontally */
+  height: 100%; /* Ensure the image fills the container vertically */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+.meta {
+  margin-bottom: 10px; /* Add margin between meta info and title */
+}
+
+.post-title {
+  font-size: 24px; /* Adjust title font size */
+  margin-bottom: 10px; /* Add margin between title and excerpt */
+}
+
+.post-excerpt {
+  margin-bottom: 15px; /* Add margin between excerpt and read more button */
+}
+
+.readmore {
+  display: inline-block; /* Ensure read more button stays inline */
 }

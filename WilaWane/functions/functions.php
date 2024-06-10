@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost","root","","ecom_store");
+$db = mysqli_connect("localhost","u283934289_root","Wilawane1!","u283934289_ecom_store");
 
 /// IP address code starts /////
 function getRealUserIp(){
@@ -72,10 +72,10 @@ function getPro()
 
         if ($pro_label == "Sale" || $pro_label == "Gift") {
             $product_price = "<del> $$pro_price </del>";
-            $product_psp_price = "| $$pro_psp_price";
+            $product_psp_price = "| K$pro_psp_price";
         } else {
             $product_psp_price = "";
-            $product_price = "$$pro_price";
+            $product_price = "K$pro_price";
         }
 
         if ($pro_label != "") {
@@ -90,7 +90,7 @@ function getPro()
             <div class='col-md-4 col-sm-6 single' >
                 <div class='product' >
                     <a href='$pro_url' >
-                        <img src='admin_area/product_images/$pro_img1' class='img-responsive' style='width: 300px; height: 300px;'>
+                        <img src='admin/product_images/$pro_img1' class='img-responsive' style='width: 300px; height: 300px;'>
                     </a>
                     <div class='text' >
                         <center></center>
@@ -140,7 +140,7 @@ while ($row_category = mysqli_fetch_array($run_categories)) {
 $cat_id = $row_category['cat_id'];
 $cat_title = $row_category['cat_title'];
 
-echo "<li><a href='shop.php?cat[]=$cat_id'>$cat_title</a></li>";
+echo "<li><a href='e_shop.php?cat[]=$cat_id'>$cat_title</a></li>";
 }
 
 echo "</ul></div>";
@@ -169,17 +169,17 @@ echo "</ul></div>";
     $total_records = mysqli_num_rows($result);
     $total_pages = ceil($total_records / $per_page);
 
-    echo "<li><a href='shop.php?page=1";
+    echo "<li><a href='e_shop.php?page=1";
     if (!empty($aPath)) {
         echo "&" . $aPath;
     }
     echo "' >" . 'First Page' . "</a></li>";
 
     for ($i = 1; $i <= $total_pages; $i++) {
-        echo "<li><a href='shop.php?page=" . $i . (!empty($aPath) ? '&' . $aPath : '') . "' >" . $i . "</a></li>";
+        echo "<li><a href='e_shop.php?page=" . $i . (!empty($aPath) ? '&' . $aPath : '') . "' >" . $i . "</a></li>";
     }
 
-    echo "<li><a href='shop.php?page=$total_pages";
+    echo "<li><a href='e_shop.php?page=$total_pages";
     if (!empty($aPath)) {
         echo "&" . $aPath;
     }
