@@ -41,8 +41,27 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-<style>
+  
+  <style>
   em{}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+#heart-icon {
+  animation: pulse 1.5s infinite;
+}
+
+
 </style>
 </head>
 
@@ -60,19 +79,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-
-
-           
-            <li><a class="nav-link scrollto" href="#">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
-           <!-- <li><a href="blog.html">Blog</a></li> -->
-          <li><a class="nav-link scrollto" href="index.html#features">Values</a></li>
-          <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
-          
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.php#products">Products</a></li>
+          <li><a class="nav-link scrollto" href="index.php#faq">Faq</a></li>
+          <li><a class="nav-link scrollto" href="index.php#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="blog.php">Blog</a></li>    
+          <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
           <li><a class="nav-link " href="e_shop.php">Shop</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
@@ -94,7 +107,7 @@
           <h2>Blog Details</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog.php">Blog</a></li>
             <li>Blog Details</li>
           </ol>
         </div>
@@ -121,7 +134,7 @@ if ($result->num_rows > 0) {
     ?>
     <article class="blog-details">
         <div class="post-img">
-        <div class="post-img"><img src="admin_area/images/<?php echo $blogDetails['image']; ?>" class="img-fluid" alt="No Image added"></div>
+        <div class="post-img"><img src="admin/images/<?php echo $blogDetails['image']; ?>" class="img-fluid" alt="No Image added"></div>
         </div>
 
         <h2 class="Title"><?php echo $blogDetails['Title']; ?></h2>
@@ -131,45 +144,14 @@ if ($result->num_rows > 0) {
                 <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#"><?php echo $blogDetails['author']; ?></a></li>
                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="<?php echo $blogDetails['date']; ?>"><?php echo date('Y-m-d H:i', strtotime($blogDetails['date'])); ?></time></a></li>
                 <!-- Add code to count and display the number of comments -->
-                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li>
+                <!--<li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="#">12 Comments</a></li>-->
             </ul>
         </div><!-- End meta top -->
 
-        <div class="Contents">
-            <?php echo $blogDetails['Content']; ?>
-        </div><!-- End post Contents -->
+      <div class="Contents">
+    <p><?php echo nl2br($blogDetails['Content']); ?></p>
+</div><!-- End post Contents -->
 
-        <!-- Comments Section -->
-        <div class="comments">
-
-            <h4 class="comments-count">Comments</h4>
-
-            <?php
-            // Fetch comments for the blog post
-            $sqlComments = "SELECT * FROM comments WHERE id = $postId";
-            $resultComments = $con->query($sqlComments);
-
-            if ($resultComments->num_rows > 0) {
-                while ($comment = $resultComments->fetch_assoc()) {
-                    ?>
-                    <div class="comment">
-                        <div class="d-flex">
-                            <!-- Display user avatar or use a placeholder -->
-                            <div class="comment-img"><img src="assets/img/blog/user-avatar.jpg" alt=""></div>
-                            <div>
-                                <h5><a href="#"><?php echo $comment['user_name']; ?></a></h5>
-                                <time datetime="<?php echo $comment['comment_date']; ?>"><?php echo $comment['comment_date']; ?></time>
-                                <p><?php echo $comment['comment_text']; ?></p>
-                            </div>
-                        </div>
-                    </div><!-- End comment -->
-                    <?php
-                }
-            } else {
-                echo "<p>No comments yet.</p>";
-            }
-            ?>
-        </div><!-- End comments -->
     </article><!-- End blog post -->
 
     <?php
@@ -194,8 +176,8 @@ $con->close();
       &copy; Copyright <strong><span>WilaWane</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-      Designed by <a href="  ">Digital Debug IT Solutions</a>
-    </div>
+              Designed & Developed with <i id="heart-icon"  class="bi bi-heart-fill"></i> by <a style="color:#F9D030;" href="  ">Digital Debug IT Solutions</a>
+            </div>
   </div>
 
   <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
