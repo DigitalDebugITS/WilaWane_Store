@@ -13,20 +13,20 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'besaemmanuel@gmail.com';             // SMTP username
-    $mail->Password   = 'uzlj bakf ufhd nanx';                         // SMTP password
-    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'besaemmanuel99@gmail.com';
+    $mail->Password   = 'uzlj bakf ufhd nanx'; // Ensure this is the correct app password or SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Use PHPMailer constants for clarity
+    $mail->Port       = 465;
 
     //Recipients
     $mail->setFrom($_POST['email'], $_POST['name']);
-    $mail->addAddress('1804685@northrise.net', 'Recipient Name');   // Add a recipient
+    $mail->addAddress('1804685@northrise.net', 'Recipient Name');
 
     // Content
-    $mail->isHTML(true);                                        // Set email format to HTML
+    $mail->isHTML(true);
     $mail->Subject = $_POST['subject'];
     $mail->Body    = strip_tags($_POST['message']);
     $mail->AltBody = strip_tags($_POST['message']);

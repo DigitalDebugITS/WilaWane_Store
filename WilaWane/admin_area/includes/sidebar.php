@@ -163,6 +163,37 @@ else {
 </ul>
 
 </li><!-- Products li Ends -->
+
+<li><!-- Products li Starts -->
+
+<a href="#" data-toggle="collapse" data-target="#resources">
+
+<i class="fa fa-fw fa-table"></i> Resources
+
+<i class="fa fa-fw fa-caret-down"></i>
+
+
+</a>
+
+<ul id="resources" class="collapse">
+
+<li>
+<a href="insert_resource.php"> Insert a Resource </a>
+</li>
+
+<li>
+<a href="view_resources.php"> View resources </a>
+</li>
+
+
+</ul>
+
+</li><!-- Products li Ends -->
+
+
+
+
+
 <li><!-- li Starts -->
 
 <a href="#" data-toggle="collapse" data-target="#p_cat">
