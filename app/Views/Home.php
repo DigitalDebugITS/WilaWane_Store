@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="cDfJfyMoMfDpe1OV3qpw_r3BxfH9bN4XsPq63Y1sLHc" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
   <title>Wila Wane Store</title>
   <meta name="description" content="Discover a wide range of Montessori wooden educational toys and books for children in Zambia. Explore our collection to support your child's creative learning journey.">
+
   <meta name="keywords" content="Montessori toys Zambia, educational toys Zambia, wooden toys, children's books Zambia, learning toys, Montessori learning">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+  <!--Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="admin/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!--Google Fonts -->
+  <link href="https://fonts.cdnfonts.com/css/buffalo-3?styles=153173" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!--Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css'); ?>" rel="stylesheet">
-  <link href="<?= base_url('assets/vendor/aos/aos.css'); ?>" rel="stylesheet">
-  <link href="<?= base_url('assets/vendor/glightbox/css/glightbox.min.css'); ?>" rel="stylesheet">
-  <link href="<?= base_url('assets/vendor/swiper/swiper-bundle.min.css'); ?>" rel="stylesheet">
-  <link href="<?= base_url('assets/css/main.css'); ?>" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!--Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
     em {}
 
+
     #imageCarousel .carousel-inner .carousel-item img {
       border-radius: 10px;
+      /* Adjust this value to control the roundness of the corners */
     }
 
     @keyframes pulse {
@@ -54,6 +88,7 @@
     gtag('config', 'G-TV6KDYGD5P');
   </script>
 
+
   <!-- Meta Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -78,12 +113,12 @@
     fbq('track', 'PageView');
   </script>
   <noscript>
-    <img height="1" width="1" src="https://www.facebook.com/tr?id=814398920593108&ev=PageView&noscript=1" />
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=814398920593108&ev=PageView
+&noscript=1" />
   </noscript>
   <!-- End Meta Pixel Code -->
 
 </head>
-
 <body>
 
   <!--======= Header ======= -->
@@ -97,6 +132,7 @@
           <li><a class="nav-link scrollto" href="#">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#products">Products</a></li>
+          <li><a class="nav-link scrollto" href="<?= base_url('Resources'); ?>">Resources</a></li>
           <li><a class="nav-link scrollto" href="#faq">Faq</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link" href="<?= base_url('blog'); ?>">Blog</a></li>
