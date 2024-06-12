@@ -615,7 +615,7 @@
                     <span class="post-date"><?= date('D, M j, Y H:i', strtotime($post['date'])); ?></span>
                     <span class="post-author"> / <?= $post['author']; ?></span>
                   </div>
-                  <h3 class="post-title"><?= $post['title']; ?></h3>
+                  <h3 class="post-title"><?= $post['Title']; ?></h3>
                   <p class="post-excerpt"><?= substr($post['Content'], 0, 100); ?>...</p>
                   <a href="<?= base_url('blog-details/' . $post['id']); ?>" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>

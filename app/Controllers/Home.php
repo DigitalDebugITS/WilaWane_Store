@@ -10,7 +10,7 @@ class Home extends BaseController
     {
         $homeModel = new HomeModel();
         $data['blogPosts'] = $homeModel->getBlogPosts();
-        // log_message('info','blog data:'.print_r($data));
+            // log_message('info','blog data:'.print_r($data));
 
         return view('home', $data);
     }
