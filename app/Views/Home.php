@@ -91,7 +91,7 @@
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div class="post-box">
                 <div class="post-img-container">
-                  <img src="<?= base_url('admin/images/' . $post['Cover_Image']); ?>" class="img-fluid" alt="No Image added">
+                  <img src="<?= base_url('assets/img/' . $post['Cover_Image']); ?>" class="img-fluid" alt="No Image added">
                 </div>
                 <div class="post-content">
                   <div class="meta">
@@ -930,22 +930,22 @@
         <div class="row">
           <!-- Assuming you have a function to fetch blog posts, replace 'getBlogPosts' with your actual function -->
           <?php
-          $blogPosts = getBlogPosts();
+          
           foreach ($blogPosts as $post) :
           ?>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div class="post-box">
                 <div class="post-img-container">
-                  <img src="<?= base_url('admin/images/' . $post['image']); ?>" class="img-fluid" alt="No Image added">
+                  <img src="<?= base_url('assets/img/'. $post['Cover_Image']); ?>" class="img-fluid" alt="No Image added">
                 </div>
                 <div class="post-content">
                   <div class="meta">
                     <span class="post-date"><?= date('D, M j, Y H:i', strtotime($post['date'])); ?></span>
                     <span class="post-author"> / <?= $post['author']; ?></span>
                   </div>
-                  <h3 class="post-title"><?= $post['title']; ?></h3>
-                  <p class="post-excerpt"><?= substr($post['content'], 0, 100); ?>...</p>
-                  <a href="<?= base_url('blog-details.php?id=' . $post['id']); ?>" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                  <h3 class="post-title"><?= $post['Title']; ?></h3>
+                  <p class="post-excerpt"><?= substr($post['Content'], 0, 100); ?>...</p>
+                  <a href="<?= base_url('blog-details.php?id='. $post['id']); ?>" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
