@@ -31,7 +31,7 @@ class Resources extends BaseController
         $totalPages = ceil($totalResources / $resourcesPerPage);
 
         // Pass data to the view
-        return view('resources/index', [
+        return view('Resources', [
             'categories' => $categories,
             'resources' => $resources,
             'selectedCategory' => $selectedCategory,
