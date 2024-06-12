@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Home extends Model
+class HomeModel extends Model
 {
     protected $table = 'blog';
     protected $primaryKey = 'id';
