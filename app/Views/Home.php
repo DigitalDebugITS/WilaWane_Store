@@ -20,7 +20,225 @@
   <link href="<?= base_url('assets/img/favicon.png'); ?>" rel="icon">
   <link href="<?= base_url('assets/img/apple-touch-icon.png'); ?>" rel="apple-touch-icon">
 
-  <!--Google Fonts -->
+  <!--Google Fonts --><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Wila Wane Store</title>
+  <meta name="description" content="Discover a wide range of Montessori wooden educational toys and books for children in Zambia. Explore our collection to support your child's creative learning journey.">
+  <meta name="keywords" content="Montessori toys Zambia, educational toys Zambia, wooden toys, children's books Zambia, learning toys, Montessori learning">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css'); ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/aos/aos.css'); ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/glightbox/css/glightbox.min.css'); ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/vendor/swiper/swiper-bundle.min.css'); ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/css/main.css'); ?>" rel="stylesheet">
+</head>
+<body>
+  <!--======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a href="<?= base_url('/'); ?>" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <img src="<?= base_url('assets/img/wila_wane.png'); ?>" alt="Logo">
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#products">Products</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Faq</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link" href="blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link " href="https://wa.me/c/260975520847">Shop</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+      <a class="btn-getstarted" href="https://wa.me/c/260975520847">SHOP NOW</a>
+    </div>
+  </header><!-- End Header -->
+
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+      <img src="<?= base_url('assets/img/wila_wane.png'); ?>" class="img-fluid animated">
+  </section>
+
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h1 style="font-family: 'Buffalo', sans-serif;color: #F62AA0;">About Us</h1>
+          <p style="font-size: larger; color: black;">WilaWane Store is a registered wooden educational toys and bookstore...</p>
+        </div>
+        <!-- Add other sections here as in your original HTML -->
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- Add other sections here as in your original HTML -->
+
+    <!-- Recent Blog Posts Section -->
+    <section id="blog" class="recent-blog-posts">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h1 style="font-family: 'Buffalo', sans-serif; color: #F62AA0;">Blog</h1>
+          <p style="color: black;">Recent posts from our Blog</p>
+        </div>
+
+        <div class="row">
+          <?php foreach ($blogPosts as $post) : ?>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="post-box">
+                <div class="post-img-container">
+                  <img src="<?= base_url('admin/images/' . $post['Cover_Image']); ?>" class="img-fluid" alt="No Image added">
+                </div>
+                <div class="post-content">
+                  <div class="meta">
+                    <span class="post-date"><?= date('D, M j, Y H:i', strtotime($post['date'])); ?></span>
+                    <span class="post-author"> / <?= $post['author']; ?></span>
+                  </div>
+                  <h3 class="post-title"><?= $post['Title']; ?></h3>
+                  <p class="post-excerpt"><?= substr($post['Content'], 0, 100); ?>...</p>
+                  <a href="<?= base_url('blog-details/' . $post['id']); ?>" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add other sections here as in your original HTML -->
+
+    <!--======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h1 style="font-family: 'Buffalo', sans-serif; color: #F62AA0;">Contact Us</h1>
+        </div>
+        <div class="row gy-5 gx-lg-5">
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p style="color: black;">Plot 552/3 <br> kamanga road / vorna valley <br> Lusaka - Zambia</p>
+                </div>
+              </div>
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p style="color: black;">sales@wilawanestore.com</p>
+                </div>
+              </div>
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p style="color: black;">+260 975520847</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <form action="<?= base_url('contacts'); ?>" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>WilaWane</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed & Developed with <i id="heart-icon" class="bi bi-heart-fill"></i> by <a style="color:white;" href="#">Digital Debug IT Solutions</a>
+          </div>
+        </div>
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="https://m.facebook.com/pages/Wila-Wane-Store/106955238955872/?locale=hi_IN" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/wilawane_store" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F260975520847&e=AT29F0ZTN12zGL0_5jvEVaggF0EcbLbAbmH3NIbXHDlJXls5Xu9Hom-MJGSgM7ee-PH45Rshp_wnabKY3nhO9jTgZkZQT5abRtlxGw" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!--Vendor JS Files -->
+  <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+  <script src="<?= base_url('assets/vendor/aos/aos.js'); ?>"></script>
+  <script src="<?= base_url('assets/vendor/glightbox/js/glightbox.min.js'); ?>"></script>
+  <script src="<?= base_url('assets/vendor/isotope-layout/isotope.pkgd.min.js'); ?>"></script>
+  <script src="<?= base_url('assets/vendor/swiper/swiper-bundle.min.js'); ?>"></script>
+  <script src="<?= base_url('assets/vendor/php-email-form/validate.js'); ?>"></script>
+
+  <!--Template Main JS File -->
+  <script src="<?= base_url('assets/js/main.js'); ?>"></script>
+</body>
+</html>
+
+<script>
+  $(document).ready(function() {
+    $('.nav-link').click(function() {
+      var content = $(this).parent().find('.tab-pane').html();
+      $('.card-details').html(content);
+    });
+  });
+
+  function openLogin() {
+    var loginForm = prompt("Enter your login credentials:");
+
+    if (loginForm !== null) {
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          if (this.responseText.trim() === "success") {
+            window.location.href = "<?= base_url('e_shop.php'); ?>";
+          } else {
+            alert("Login failed. Please try again.");
+          }
+        }
+      };
+
+      xmlhttp.open("GET", "<?= base_url('customer/customer_login.php?login='); ?>" + loginForm, true);
+      xmlhttp.send();
+    }
+  }
+</script>
+
   <link href="https://fonts.cdnfonts.com/css/buffalo-3?styles=153173" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

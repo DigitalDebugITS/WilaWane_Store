@@ -2,10 +2,15 @@
 
 namespace App\Controllers;
 
+use App\Models\Home;
+
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('Home');
+        $homeModel = new Home();
+        $data['blogPosts'] = $homeModel->getBlogPosts();
+
+        return view('home', $data);
     }
 }
