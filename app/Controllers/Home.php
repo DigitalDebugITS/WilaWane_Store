@@ -14,4 +14,8 @@ class Home extends BaseController
 
         return view('home', $data);
     }
+
+    public function resources(){
+        return view('resources');
+    }
 }
