@@ -11,7 +11,7 @@
           <li><a class="nav-link scrollto" href="#">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#products">Products</a></li>
-          <li><a  class="nav-link" href="<?= base_url('resources'); ?>">Resources</a></li>
+          <li><a href="<?= base_url('resources'); ?>">Resources</a></li>
           <li><a class="nav-link scrollto" href="#faq">Faq</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link" href="<?= base_url('blog'); ?>">Blog</a></li>

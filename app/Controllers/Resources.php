@@ -8,7 +8,7 @@ class Resources extends BaseController
 {
     public function index()
     {
-        $model = new ResourceModel();
+        $resourcesmodel = new ResourceModel();
         $resourcesPerPage = 6;
 
         // Determine the current page number
